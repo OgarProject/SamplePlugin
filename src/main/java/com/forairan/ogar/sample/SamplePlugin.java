@@ -19,5 +19,7 @@ public class SamplePlugin extends Plugin {
     @Override
     public void onEnable() {
         getLogger().info("SamplePlugin#onEnable called!");
+        getPluginManager().registerEvents(this, new SampleListener(this));
+        getLogger().info("SamplePlugin: listener registered.");
     }
 }
